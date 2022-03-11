@@ -1,0 +1,1 @@
+Temporary forlder for downloading attachments from Kitsu 

@@ -22,4 +22,3 @@ conf.toml
 *.db
 /release
 /deploy
-README.md
