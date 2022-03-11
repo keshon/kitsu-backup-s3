@@ -1,0 +1,27 @@
+# Configuration file
+debug = false # debugging
+
+# Kitsu relating settings. Specify Hostname of your Kitsu instance e.g. "https://kitsu-example.com/".
+# Email and password must belong to Kitsu account with `Studio Manager` role.
+[kitsu]
+hostname = "https://url-to-kitsu/" # url to Kitsu instance, trailing slash is mandatory
+email = "email@example" # studio manager login
+password = "123" # studio manager password
+
+# Everything about backups attached files from Kitsu. Poll duration - how often backup should be initiated.
+[backup]
+threads = 0 # download threds, set 0 to go synchronous way (the slowest), -1 for wait groups, > 0 - semafore threads (unstable)
+poll_duration = 60 # how frequent backup should be made, in minutes
+local_storage = "./tmp/" # temporary forlder for downloads, trailing slash is mandatory
+ignore_extension = ["jpg", "jpeg", "JPG", "JPEG"] # array of extension to ignore in attachments
+fast_delete = false
+
+# S3 related settings. The testing was done on Wasabi S3 only but in theory should work with any S3 storage provider.
+[backup.s3]
+access_key = "S3_ACCESS_KEY"
+secret_key = "S3_SECRET_KEY"
+bucket_name = "example-bucket-name"
+endpoint = "https://s3-url-endpoint/"
+region = "REGION"
+s3_force_path_style = true
+root_folder_name = "KitsuBackups" # Specify the root folder in a bucket to save to
