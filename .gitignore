@@ -22,3 +22,4 @@ conf.toml
 *.db
 /release
 /deploy
+/logs/log.txt
