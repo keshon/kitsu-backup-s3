@@ -10,7 +10,7 @@ password = "123" # studio manager password
 
 # Everything about backups attached files from Kitsu. Poll duration - how often backup should be initiated.
 [backup]
-threads = 0 # download threds, set 0 to go synchronous way (the slowest), -1 for wait groups, > 0 - semafore threads (unstable)
+threads = 0 # download threads, set 0 to go synchronous way (the slowest), -1 for wait groups, > 0 - semafore threads (unstable)
 poll_duration = 60 # how frequent backup should be made, in minutes
 local_storage = "./tmp/" # temporary forlder for downloads, trailing slash is mandatory
 ignore_extension = ["jpg", "jpeg", "JPG", "JPEG"] # array of extension to ignore in attachments
